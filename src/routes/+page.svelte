@@ -3,11 +3,11 @@
 
 <!--------markup-------->
 
-<div />
-
 <!--------style-------->
 <style lang="sass">
-  @use "$src/vars"
-  @use "$src/oc"
+	@use "$src/vars"
+	@use "$src/oc"
+
+
 
 </style>

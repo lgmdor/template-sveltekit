@@ -4,7 +4,6 @@
 $size-1: 1rem
 $size-2: $size-1 * 2
 $size-4: $size-1 * 4
-$size-6: $size-1 * 6
 $size-8: $size-1 * 8
 $size-12: $size-1 * 12
 $size-16: $size-1 * 16
@@ -16,25 +15,77 @@ $size-64: $size-1 * 64
 $size-128: $size-1 * 128
 
 //text colors
-$c-text-1: oc.$oc-gray-0
-$c-text-2: oc.$oc-gray-5
-$c-text-3: oc.$oc-gray-6
+$c-text-1: oc.$dark-1
+$c-text-2: oc.$dark-2
+$c-text-3: oc.$dark-3
 
-//background colors
-$c-bg-1: oc.$oc-gray-9
-$c-bg-2: oc.$oc-gray-8
-$c-bg-3: oc.$oc-gray-7
-$c-bg-4: oc.$oc-gray-6
+//other colors
+$c-main: oc.$indigo-8
+$c-white: oc.$gray-1
 
 //space
-$space-1: 1em
-$space-2: 0.5em
-$space-3: 2em
+$space-xxs: 4px
+$space-xs: 6px
+$space-s: 10px
+$space-m: 16px
+$space-l: 26px
+$space-xl: 42px
+
+//borders
+$border-dark: 1px solid oc.$dark-7
+$border-default: 1px solid oc.$dark-6
+$border-light: 1px solid oc.$dark-4
 
 //misc
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif, Apple Color Emoji, Segoe UI Emoji
+$font-family-mono: "Inconsolata"
 $border-radius: 4px
-$border: 1px solid oc.$oc-gray-7
 $boxShadow: rgba(0, 0, 0, 0.18) 0px 2px 4px
 $lineHeight: calc(1em + 1ex)
 
+//mixins
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
 
+@mixin transition($type)
+  transition: $type 60ms linear
+
+@mixin bgHover($color, $lightness)
+  background-color: $color
+  &:hover
+    background-color: lighten($color, $lightness)
+
+//fonts
+@mixin font-xs
+  font-size: 10px
+  line-height: $lineHeight
+  letter-spacing: 0.6px
+  
+@mixin font-s 
+  font-size: 12px
+  line-height: $lineHeight
+  letter-spacing: 0.4px
+  
+@mixin font-s-bold
+  font-size: 12px
+  line-height: $lineHeight
+  letter-spacing: normal
+  font-weight: 500
+
+@mixin font-m
+  font-size: 14px
+  line-height: $lineHeight
+  letter-spacing: 0.2px
+
+
+@mixin font-l
+  font-size: 16px
+  line-height: $lineHeight
+
+@mixin font-xl
+  font-size: 20px
+  line-height: $lineHeight
+
+//globals
