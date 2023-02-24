@@ -25,8 +25,8 @@ export let position = "no";
       bottom: 0
       left: 0
       right: 0
-      border-bottom-left-radius: vars.$border-radius
-      border-bottom-right-radius: vars.$border-radius
+      border-bottom-left-radius: vars.$br-m
+      border-bottom-right-radius: vars.$br-m
       ul
         grid-auto-columns: 1fr
         grid-auto-flow: column

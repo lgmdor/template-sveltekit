@@ -150,7 +150,7 @@ const unfocus = () => isFocused.set(false);
       border: vars.$border-light
       min-height: vars.$size-2
       width: 100%
-      border-radius: vars.$border-radius
+      border-radius: vars.$br-m
       background: oc.$dark-6
       display: flex
       flex-wrap: wrap
@@ -166,7 +166,7 @@ const unfocus = () => isFocused.set(false);
         right: 0
         background: red
         top: 100%
-        border-radius: vars.$border-radius
+        border-radius: vars.$br-m
         overflow: hidden
       .placeholder
         color: oc.$dark-3

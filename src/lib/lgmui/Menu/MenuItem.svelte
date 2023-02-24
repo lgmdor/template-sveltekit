@@ -1,22 +1,24 @@
 <script>
-import { key } from "./Multiselect.svelte";
 import { getContext } from "svelte";
+import { key } from "./Menu.svelte";
 
-export let content = "";
-export let overrideDefaultAction = false;
+export let danger = false;
 
-const { selectItem } = getContext(key);
+const { show } = getContext(key);
 
-const select = (node) => {
-	if (!overrideDefaultAction) {
-		selectItem(content);
-	}
-};
+const hide = () => show.set(false);
 </script>
 
 <!--------markup-------->
 
-<li on:click={select} on:keydown={select}>
+<li
+	on:click|stopPropagation
+	on:click={hide}
+	on:keydown|stopPropagation
+	on:keydown={hide}
+	class="lgmui menu-item"
+	class:danger
+>
 	<slot />
 </li>
 
@@ -24,7 +26,7 @@ const select = (node) => {
 <style lang="sass">
   @use 'src/vars'
   @use 'src/oc'
-  
+
   li
     background: transparent
     padding: 0 vars.$space-s
@@ -37,5 +39,8 @@ const select = (node) => {
     user-select: none
     &:hover
       background: oc.$dark-4
-
+    &.danger
+      color: oc.$red-8
+      &:hover
+        background: transparentize(oc.$red-8, 0.8)
 </style>

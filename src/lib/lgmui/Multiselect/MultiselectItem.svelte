@@ -34,7 +34,7 @@ const deselect = (node) => deselectItem(content);
       background: oc.$dark-7
       padding-left: vars.$space-s
       @include vars.center
-      border-radius: vars.$border-radius
+      border-radius: vars.$br-m
       span
         @include vars.font-s-bold
         cursor: default

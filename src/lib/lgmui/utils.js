@@ -1,6 +1,14 @@
-export const outsideClick = (node) => {
+export const outsideClick = (node, payload) => {
 	const handleClick = (event) => {
-		if (node && !node.contains(event.target) && !event.defaultPrevented) {
+		if (
+			node &&
+			!node.contains(event.target) &&
+			!event.defaultPrevented &&
+			!payload.excludeNode.contains(event.target)
+		) {
+			if (payload.settings.stopPropagation) {
+				event.stopPropagation();
+			}
 			node.dispatchEvent(new CustomEvent("outsideclick", node));
 		}
 	};
