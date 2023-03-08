@@ -12,8 +12,6 @@ const open = (e) => {
 const close = () => {
 	show = false;
 };
-
-const sex = () => console.log("sex");
 </script>
 
 <!--------markup-------->

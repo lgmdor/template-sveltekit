@@ -58,7 +58,7 @@ const focusAuto = (node) => {
       @include vars.font-m
       border: vars.$border-light
       background: oc.$dark-6
-      font-family: vars.$font-family
+      font-family: vars.$ff
       color: vars.$c-text-1
       @include vars.transition(border)
       &::placeholder

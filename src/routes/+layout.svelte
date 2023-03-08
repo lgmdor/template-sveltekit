@@ -16,7 +16,7 @@
     box-sizing: border-box
 
   :global(body)
-    font-family: vars.$font-family
+    font-family: vars.$ff
     background: oc.$dark-8
     color: oc.$gray-5
     min-height: 100vh
@@ -29,6 +29,6 @@
   :global(body .tippy-box)
     background: oc.$dark-5
     font-size: 12px
-    font-family: vars.$font-family
+    font-family: vars.$ff
     color: vars.$c-white
 </style>
